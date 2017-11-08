@@ -51,11 +51,8 @@ let response = await fetch('/api/v1/session/create', {
 
 ```
 
+Fetch class includes a url variable which is meant to have the key as the expected window.location.hostname, so you can use updateFetchConfig in order to input your necessities
 
-
-
-Fetch class includes a url variable which is meant to have the key as the expected window.location.hostname,
-and the value to be the API you are expecting to connect to.
 ```
 
 updateFetchConfig({
@@ -65,4 +62,4 @@ updateFetchConfig({
 
 ```
 
-Port of course is not necessary.
+Place this function within the index of your project, so the rest of your project shares the correct urls.
