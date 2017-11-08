@@ -22,7 +22,7 @@ Import the Fetch Class
 import { Fetch } from '@fyresite/fetch'
 
 Fetch.updateConfig({
-	"localhost": "localhost:3000"
+  "localhost": "localhost:3000"
 })
 
 
@@ -36,17 +36,17 @@ import { fetch } from '@fyresite/fetch'
 
 
 let response = await fetch('/api/v1/session/create', {
-	method: 'POST',
-	headers: { "Content-Type": "application/json" },
-	body: JSON.stringify({
-		email: 'fake@gmail.com',
-		password: 'foobar'
-	})
+  method: 'POST',
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    email: 'fake@gmail.com',
+    password: 'foobar'
+  })
 }).then(res => {
-	return res;
+  return res;
 }).catch(err => {
-	console.log(err);
-	return {status: 501, message: `Fetch error ${err}`}
+  console.log(err);
+  return {status: 501, message: `Fetch error ${err}`}
 });
 
 ```
@@ -57,10 +57,12 @@ let response = await fetch('/api/v1/session/create', {
 Fetch class includes a url variable which is meant to have the key as the expected window.location.hostname,
 and the value to be the API you are expecting to connect to.
 ```
-{
-	'expected window.location.hostname': 'api.location.com'
-	'expected window.location.hostname': 'api.location.com:3000'
-}
+
+updateFetchConfig({
+  'expected window.location.hostname': 'api.location.com'
+  'expected window.location.hostname': 'api.location.com:3000'
+})
+
 ```
 
 Port of course is not necessary.
