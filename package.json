@@ -1,0 +1,15 @@
+{
+  "name": "@fyresite/fetch",
+  "version": "1.0.4",
+  "description": "Uses whatWG-fetch to provide an easier way to send api requests",
+  "main": "index.js",
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fyresite",
+  "license": "ISC",
+  "private": false
+}
