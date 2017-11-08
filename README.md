@@ -3,6 +3,17 @@ This project is for and created by Fyresite
 
 ## Package includes
 
+- Fetch, updateFetchConfig, fetch
+
+## Installing
+
+```
+
+npm install @fyresite/fetch
+
+```
+
+## Usages
 
 If you would like to use the Fetch class simply use the Fetch import
 
@@ -34,4 +45,3 @@ and the value to be the API you are expecting to connect to.
 }
 
 Port of course is not necessary.
-# Fyresite-Fetch
