@@ -9,7 +9,7 @@ class Fetch {
 	  require('whatwg-fetch');
 
 	  let mod_uri = uri;
-	  mod_uri = `${window.location.protocol}//${this.urls[window.location.hostname] || window.location.hostname}${uri}`;
+	  mod_uri = `${options.secure ? "https:" : window.location.protocol}//${this.urls[window.location.hostname] || window.location.hostname}${uri}`;
 
 	  let finalOptions = Object.assign(
 			{},
@@ -20,7 +20,7 @@ class Fetch {
 	  return fetch(mod_uri, finalOptions);
 	}
 	static getServerURL() {
-	  return `${window.location.protocol}//${this.urls[window.location.hostname] || window.location.hostname}`;
+	  return `${options.secure ? "https:" : window.location.protocol}//${this.urls[window.location.hostname] || window.location.hostname}`;
 	}
 }
 

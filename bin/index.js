@@ -22,7 +22,7 @@ var Fetch = function () {
 			require('whatwg-fetch');
 
 			var mod_uri = uri;
-			mod_uri = window.location.protocol + '//' + (this.urls[window.location.hostname] || window.location.hostname) + uri;
+			mod_uri = (options.secure ? "https:" : window.location.protocol) + '//' + (this.urls[window.location.hostname] || window.location.hostname) + uri;
 
 			var finalOptions = Object.assign({}, options, { credentials: 'include' });
 
@@ -31,7 +31,7 @@ var Fetch = function () {
 	}, {
 		key: 'getServerURL',
 		value: function getServerURL() {
-			return window.location.protocol + '//' + (this.urls[window.location.hostname] || window.location.hostname);
+			return (options.secure ? "https:" : window.location.protocol) + '//' + (this.urls[window.location.hostname] || window.location.hostname);
 		}
 	}]);
 
