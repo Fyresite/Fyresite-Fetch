@@ -1,6 +1,6 @@
 {
   "name": "@fyresite/fetch",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Uses whatWG-fetch to provide an easier way to send api requests",
   "main": "bin/index.js",
   "dependencies": {

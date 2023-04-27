@@ -19,7 +19,7 @@ class Fetch {
 
 	  return fetch(mod_uri, finalOptions);
 	}
-	static getServerURL() {
+	static getServerURL(options = {}) {
 	  return `${options.secure ? "https:" : window.location.protocol}//${this.urls[window.location.hostname] || window.location.hostname}`;
 	}
 }
@@ -36,8 +36,8 @@ function updateFetchConfig(urls){
 	Fetch.updateConfig(urls);
 }
 
-function getServerURL(){
-  return Fetch.getServerURL();
+function getServerURL(options){
+  return Fetch.getServerURL(options);
 }
 
 module.exports = {
