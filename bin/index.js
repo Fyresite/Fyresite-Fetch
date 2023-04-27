@@ -31,6 +31,8 @@ var Fetch = function () {
 	}, {
 		key: 'getServerURL',
 		value: function getServerURL() {
+			var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
 			return (options.secure ? "https:" : window.location.protocol) + '//' + (this.urls[window.location.hostname] || window.location.hostname);
 		}
 	}]);
@@ -50,8 +52,8 @@ function updateFetchConfig(urls) {
 	Fetch.updateConfig(urls);
 }
 
-function getServerURL() {
-	return Fetch.getServerURL();
+function getServerURL(options) {
+	return Fetch.getServerURL(options);
 }
 
 module.exports = {
